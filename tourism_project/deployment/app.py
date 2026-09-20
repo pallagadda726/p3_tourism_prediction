@@ -56,11 +56,11 @@ input_data = pd.DataFrame([{
 }])
 
 # Set the classification threshold
-classification_threshold = 0.45
+classification_threshold = 0.50
 
 # Predict button
 if st.button("Predict"):
     prob = model.predict_proba(input_data)[0,1]
     pred = int(prob >= classification_threshold)
-    result = "will purchase the travel package" if pred == 1 else "is unlikely to purchase"
+    result = "is likely to purchase the travel package" if pred == 1 else "is unlikely to purchase"
     st.write(f"Prediction: Customer {result}")
