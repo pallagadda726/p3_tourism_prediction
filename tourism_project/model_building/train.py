@@ -117,7 +117,7 @@ with mlflow.start_run():
 
     # Save the model next to app.py so the Streamlit app can load it directly,
     # and log it as an MLflow artifact for traceability
-    model_path = "/content/drive/MyDrive/ColabNotebooks/P3_TourismPrediction/tourism_project/deployment/best_model.joblib"  
+    model_path = "tourism_project/deployment/best_model.joblib"  
     joblib.dump(best_model, model_path)  # complete the code to save the model
     mlflow.log_artifact(model_path, artifact_path="model")
     print(f"Model saved to {model_path}")
