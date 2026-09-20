@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # Load the model committed by the pipeline (sits next to this file)
-model_path = os.path.join(os.path.dirname(__file__), "tourism_project/deployment/best_model.joblib")
+model_path = os.path.join(os.path.dirname(__file__), "best_model.joblib")
 model = joblib.load(model_path)
 
 # Streamlit UI for Tourism Package Prediction
